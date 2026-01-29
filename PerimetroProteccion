@@ -1,0 +1,88 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# --- Parámetros (tus valores actualizados para 403A21 Baja Tordera) ---
+Q   = 1080.0       # m³/día
+T   = 8685.7       # m²/día
+ne  = 0.20         # porosidad efectiva
+b   = 13.0         # m
+i   = 0.003        # gradiente hidráulico natural
+tiempos = [60.0, 100.0, 1825.0]  # 60 días, 100 días, 5 años (365*5 = 1825)
+
+pozo_x_real = 479732.0
+pozo_y_real = 4614252.0
+
+# Cálculos derivados comunes
+K  = T / b
+q0 = K * i                  # Descarga específica (m/día)
+v0 = q0 / ne                # Velocidad porosa efectiva (m/día)
+Xo = Q / (2 * np.pi * T * i)  # Radio de llamada aproximado (m)
+rw = 0.6                    # Radio del pozo (m) – no se usa en Wyssling analítico
+
+# --- Función para calcular perímetro Wyssling (aproximación elíptica) ---
+def calculate_wyssling_perimeter(t):
+    if i < 1e-6:  # Caso prácticamente radial (gradiente muy bajo)
+        R = np.sqrt(Q * t / (np.pi * ne * b))
+        theta = np.linspace(0, 2*np.pi, 200)
+        x_wyss = R * np.cos(theta)
+        y_wyss = R * np.sin(theta)
+        print(f"--- Wyssling (circular) para t = {t} días ---")
+        print(f"Radio ≈ {R:.1f} m\n")
+    else:
+        alpha = 2 * np.pi * ne * b * v0 * t / Q
+        L_plus  = Xo * (np.sqrt(1 + alpha) + 1) / 2   # distancia aguas arriba
+        L_minus = Xo * (np.sqrt(1 + alpha) - 1) / 2   # distancia aguas abajo
+        B       = 2 * np.sqrt(Xo * L_plus)            # ancho máximo aproximado
+
+        print(f"--- Wyssling para t = {t} días ---")
+        print(f"Xo      = {Xo:.1f} m")
+        print(f"L+      = {L_plus:.1f} m  (aguas arriba)")
+        print(f"L-      = {L_minus:.1f} m  (aguas abajo)")
+        print(f"Ancho B ≈ {B:.1f} m\n")
+
+        # Construcción de la elipse desplazada
+        a = (L_plus + L_minus) / 2              # semi-eje mayor
+        b_ell = B / 2                           # semi-eje menor
+        center_x = -L_minus                     # desplazamiento para que el pozo quede en (0,0) relativo
+
+        theta = np.linspace(0, 2*np.pi, 200)
+        x_wyss = center_x + a * np.cos(theta)
+        y_wyss = b_ell * np.sin(theta)
+
+    return x_wyss, y_wyss
+
+# --- Calcular la extensión máxima para hacer zoom adecuado ---
+max_extents = []
+for t in tiempos:
+    x_wyss, y_wyss = calculate_wyssling_perimeter(t)
+    dists = np.sqrt(np.array(x_wyss)**2 + np.array(y_wyss)**2)
+    max_extents.append(np.max(dists))
+
+max_extent = max(max_extents) * 1.2 if max_extents else 1000  # 20% de margen
+
+# --- Gráfico único con los 3 perímetros Wyssling ---
+plt.figure(figsize=(12, 10))
+plt.plot(pozo_x_real, pozo_y_real, 'ro', markersize=12, label='Pozo')
+
+colores = ['g', 'm', 'c']  # Verde, magenta, cian
+
+for idx, t in enumerate(tiempos):
+    x_wyss, y_wyss = calculate_wyssling_perimeter(t)
+    x_real = [x + pozo_x_real for x in x_wyss]
+    y_real = [y + pozo_y_real for y in y_wyss]
+    plt.plot(x_real, y_real, colores[idx] + '-', linewidth=2.2,
+             label=f'Wyssling t = {t} días')
+
+plt.xlabel('X (m, UTM 31N)')
+plt.ylabel('Y (m, UTM 31N)')
+plt.title('Perímetros de protección – Método Wyssling (3 tiempos)')
+plt.axis('equal')
+plt.grid(True, alpha=0.6)
+plt.legend()
+plt.xlim(pozo_x_real - max_extent, pozo_x_real + max_extent)
+plt.ylim(pozo_y_real - max_extent, pozo_y_real + max_extent)
+plt.tight_layout()
+plt.show()
+
+
+
