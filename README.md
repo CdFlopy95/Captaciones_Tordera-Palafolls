@@ -36,6 +36,20 @@ El análisis incluye:
 | 100 días  | ~700 m | ~80 m | ~410 m |
 | 5 años    | ~1.800 m | ~400 m | ~830 m |
 
+## Visualizaciones
+
+![Curvas de descenso](output/01_curvas_descenso.png)
+*Curvas de descenso semilogarítmicas por escalón*
+
+![Cooper-Jacob](output/02_cooper_jacob.png)
+*Ajuste Cooper-Jacob — estimación de T*
+
+![Eficiencia del pozo](output/03_eficiencia_pozo.png)
+*Análisis de eficiencia del pozo (Jacob)*
+
+![Perímetros Wyssling](output/04_perimetros_wyssling.png)
+*Perímetros de protección — Método Wyssling*
+
 ```
 captaciones_tordera/
 │
