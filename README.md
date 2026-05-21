@@ -36,9 +36,7 @@ El análisis incluye:
 | 100 días  | ~700 m | ~80 m | ~410 m |
 | 5 años    | ~1.800 m | ~400 m | ~830 m |
 
----
-
-## Estructura del repositorio
+```
 captaciones_tordera/
 │
 ├── data/
@@ -50,8 +48,7 @@ captaciones_tordera/
 │   └── 04_perimetros_wyssling.png
 ├── analisis_hidrogeologico_palafolls.ipynb
 └── README.md
----
-
+```
 ## Cómo ejecutar el análisis
 
 ```bash
