@@ -7,7 +7,9 @@
 
 ## Descripción del proyecto
 
-Análisis hidrogeológico completo del **Pozo A (403A21) en el acuífero aluvial del Baix Tordera**, municipio de Palafolls (Barcelona). El acuífero aluvial del río Tordera es uno de los más importantes de Catalunya por su alta transmisividad y su función como fuente de abastecimiento urbano e industrial.
+El presente trabajo forma parte del **Máster en Ciencia y Gestión Integral del Agua** de la Universitat de Barcelona y tiene como objetivo proponer una **estrategia sostenible de abastecimiento hídrico** para los municipios de **La Tordera** y **Palafolls** (comarca del Maresme, Barcelona).
+
+Dada la **inviabilidad del uso directo del río Tordera** como fuente principal de abastecimiento (bajo caudal medio anual de 1,10 m³/s, alta irregularidad estacional y contaminación por vertidos), se optó por el **diseño de una captación subterránea** en el **acuífero fluviodeltaico profundo de la baja Tordera (código 403A21)**.
 
 El análisis incluye:
 
