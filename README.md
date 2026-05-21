@@ -96,10 +96,12 @@ Los elevados valores de transmisividad (>5.000 m²/día) lo convierten en un rec
 Geólogo · Hidrogeólogo · GIS & Data Analyst 
 M.Sc. Ciencia y Gestión Integral del Agua — Universitat de Barcelona  
 [LinkedIn](https://www.linkedin.com/in/danielmu95/) · [GitHub](https://github.com/cdmunozs)
+
 **Lorena Larrotta Morales**  
 Geóloga · Hidrogeóloga
 M.Sc. Ciencia y Gestión Integral del Agua — Universitat de Barcelona  
 [LinkedIn](https://www.linkedin.com/in/lorena-larrotta-morales-202098/) 
+
 **Yomery Mercedes**  
 Ingeniera Química · Analista de Laboratorio · Control de Calidad· Análisis fisicoquímico y Microbiológico
 M.Sc. Ciencia y Gestión Integral del Agua — Universitat de Barcelona  
