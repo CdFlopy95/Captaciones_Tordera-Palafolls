@@ -62,6 +62,7 @@ captaciones_tordera/
 │   ├── 02_cooper_jacob.png
 │   ├── 03_eficiencia_pozo.png
 │   └── 04_perimetros_wyssling.png
+├── Informe_Final_Captaciones_Tordera-Palafolls.pdf
 ├── analisis_hidrogeologico_palafolls.ipynb
 └── README.md
 ```
