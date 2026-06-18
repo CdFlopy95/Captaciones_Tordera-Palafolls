@@ -1,56 +1,55 @@
-# Captaciones Tordera — Análisis Hidrogeológico (Palafolls, Catalunya)
+# Tordera Groundwater Capture — Hydrogeological Analysis (Palafolls, Catalonia)
 
-> **Ensayo de bombeo escalonado · Cooper-Jacob · Eficiencia de pozo · Perímetros de protección Wyssling**  
-> Proyecto académico — M.Sc. Ciencia y Gestión Integral del Agua, Universitat de Barcelona (2024–2026)
-
----
-
-## Descripción del proyecto
-
-El presente trabajo forma parte del **Máster en Ciencia y Gestión Integral del Agua** de la Universitat de Barcelona y tiene como objetivo proponer una **estrategia sostenible de abastecimiento hídrico** para los municipios de **La Tordera** y **Palafolls** (comarca del Maresme, Barcelona).
-
-Dada la **inviabilidad del uso directo del río Tordera** como fuente principal de abastecimiento (bajo caudal medio anual de 1,10 m³/s, alta irregularidad estacional y contaminación por vertidos), se optó por el **diseño de una captación subterránea** en el **acuífero fluviodeltaico profundo de la baja Tordera (código 403A21)**.
-
-El análisis incluye:
-
-1. **Ensayo de bombeo escalonado** — Interpretación de 3 escalones de caudal (265, 327 y 377 m³/h) con medición sincronizada en 3 puntos de observación.
-2. **Método Cooper-Jacob** — Estimación de transmisividad (T) y coeficiente de almacenamiento (S) a partir de las curvas de descenso.
-3. **Eficiencia del pozo (Jacob, 1947)** — Separación de pérdidas lineales y no lineales para evaluar el estado constructivo del pozo.
-4. **Perímetros de protección (Wyssling)** — Delimitación de zonas de captura para horizontes de 60 días, 100 días y 5 años.
+> **Step-drawdown pumping test · Cooper-Jacob method · Well efficiency · Wyssling protection perimeters** > Academic Project — M.Sc. Science and Integrated Water Management, Universitat de Barcelona (2024–2026)
 
 ---
 
-## Resultados principales
+## Project Description
 
-| Parámetro | Valor |
+This project was developed as part of the **Master's degree in Science and Integrated Water Management** at the Universitat de Barcelona. Its main objective is to design a **sustainable water supply strategy** for the municipalities of **La Tordera** and **Palafolls** (Maresme region, Barcelona).
+
+Given that using the Tordera River directly as a primary supply source is **unfeasible** (due to a low average annual flow of 1.10 m³/s, high seasonal irregularity, and wastewater contamination), the project focuses on **designing a groundwater extraction system** within the **deep fluviochevron-deltaic aquifer of the Lower Tordera (Code: 403A21)**.
+
+The comprehensive analysis includes:
+
+1. **Step-Drawdown Pumping Test** — Interpretation of 3 discharge steps (265, 327, and 377 m³/h) with synchronized drawdown measurements across 3 observation points.
+2. **Cooper-Jacob Method** — Estimation of aquifer Transmissivity (T) and Storage Coefficient (S) derived from drawdown-time curves.
+3. **Well Efficiency (Jacob, 1947)** — Separation of linear and non-linear well losses to evaluate the structural and hydraulic efficiency of the well.
+4. **Protection Perimeters (Wyssling Method)** — Delineation of capture zones and sanitary protection boundaries for time horizons of 60 days, 100 days, and 5 years.
+
+---
+
+## Main Results
+
+| Parameter | Value |
 |-----------|-------|
-| Transmisividad (T) | ~8.686 m²/día |
-| Conductividad hidráulica (K) | ~668 m/día |
-| Gradiente hidráulico regional (i) | 0.003 |
-| Caudal concesional de diseño | 1.080 m³/día |
-| Radio de llamada (X₀) | ~18.800 m |
+| Transmissivity (T) | ~8,686 m²/day |
+| Hydraulic Conductivity (K) | ~668 m/day |
+| Regional Hydraulic Gradient (i) | 0.003 |
+| Design Extraction Flow Rate | 1,080 m³/day |
+| Radius of Influence (X₀) | ~18,800 m |
 
-**Perímetros de protección (Wyssling):**
+**Protection Perimeters (Wyssling Method):**
 
-| Horizonte | Extensión aguas arriba (L+) | Extensión aguas abajo (L-) | Ancho máximo (B) |
-|-----------|--------------------------|--------------------------|--------------------|
-| 60 días   | ~500 m | ~50 m | ~310 m |
-| 100 días  | ~700 m | ~80 m | ~410 m |
-| 5 años    | ~1.800 m | ~400 m | ~830 m |
+| Time Horizon | Upstream Extension (L+) | Downstream Extension (L-) | Maximum Width (B) |
+|--------------|-------------------------|---------------------------|-------------------|
+| 60 days      | ~500 m                  | ~50 m                     | ~310 m            |
+| 100 days     | ~700 m                  | ~80 m                     | ~410 m            |
+| 5 years      | ~1,800 m                | ~400 m                    | ~830 m            |
 
-## Visualizaciones
+## Data Visualizations
 
-![Curvas de descenso](output/01_curvas_descenso.png)
-*Curvas de descenso semilogarítmicas por escalón*
+![Drawdown Curves](output/01_curvas_descenso.png)
+*Semilogarithmic drawdown-time curves per pumping step*
 
-![Cooper-Jacob](output/02_cooper_jacob.png)
-*Ajuste Cooper-Jacob — estimación de T*
+![Cooper-Jacob Adjustment](output/02_cooper_jacob.png)
+*Cooper-Jacob straight-line alignment — T & S estimation*
 
-![Eficiencia del pozo](output/03_eficiencia_pozo.png)
-*Análisis de eficiencia del pozo (Jacob)*
+![Well Efficiency](output/03_eficiencia_pozo.png)
+*Well efficiency and head loss analysis (Jacob's method)*
 
-![Perímetros Wyssling](output/04_perimetros_wyssling.png)
-*Perímetros de protección — Método Wyssling*
+![Wyssling Perimeters](output/04_perimetros_wyssling.png)
+*Sanitary protection zones — Wyssling Method mapping*
 
 ```
 captaciones_tordera/
@@ -70,7 +69,7 @@ captaciones_tordera/
 ├── analisis_hidrogeologico_palafolls.ipynb
 └── README.md
 ```
-## Cómo ejecutar el análisis
+## How to Run the Analysis
 
 ```bash
 pip install pandas numpy matplotlib scipy
@@ -89,34 +88,34 @@ jupyter notebook analisis_hidrogeologico_palafolls.ipynb
 
 ---
 
-## Contexto geológico
+## Geological Context
 
-El **acuífero aluvial del Baix Tordera** es un sistema de acuífero libre-confinado formado por depósitos cuaternarios de gravas, arenas y limos del río Tordera en su tramo bajo. Presenta alta permeabilidad y está hidráulicamente conectado con el río y, en algunos sectores, con el mar Mediterráneo.
+The **Baix Tordera alluvial aquifer** is an unconfined-to-confined groundwater system composed of Quaternary deposits of gravel, sand, and silt from the lower reaches of the Tordera River. It displays high permeability and features strong hydraulic connectivity with both the surface river network and, in certain littoral sectors, the Mediterranean Sea.
 
-Los elevados valores de transmisividad (>5.000 m²/día) lo convierten en un recurso estratégico, pero también lo hacen vulnerable a la contaminación, de ahí la importancia de delimitar correctamente los perímetros de protección.
+While its exceptionally high transmissivity values (>5,000 m²/day) render it a vital strategic resource for regional development, they also increase its vulnerability to anthropogenic pollution. This high vulnerability highlights the critical importance of accurately delineating groundwater capture zones and protection perimeters.
 
 ---
 
-## Autores
+## Authors
 
 **Carlos Daniel Muñoz Sánchez**  
-- Geólogo · Hidrogeólogo · GIS & Data Analyst 
-- M.Sc. Ciencia y Gestión Integral del Agua — Universitat de Barcelona  
+- Geologist · Hydrogeologist · GIS & Data Analyst 
+- M.Sc. Science and Integrated Water Management — Universitat de Barcelona  
 [LinkedIn](https://www.linkedin.com/in/danielmu95/) · [GitHub](https://github.com/cdmunozs)
 
 **Lorena Larrotta Morales**  
-- Geóloga · Hidrogeóloga 
-- M.Sc. Ciencia y Gestión Integral del Agua — Universitat de Barcelona  
+- Geologist · Hydrogeologist 
+- M.Sc. Science and Integrated Water Management — Universitat de Barcelona  
 [LinkedIn](https://www.linkedin.com/in/lorena-larrotta-morales-202098/) 
 
 **Yomery Mercedes**  
-- Ingeniera Química · Analista de Laboratorio · Control de Calidad· Análisis fisicoquímico y Microbiológico 
-- M.Sc. Ciencia y Gestión Integral del Agua — Universitat de Barcelona  
+- Chemical Engineer · Laboratory Analyst · Quality Control · Physicochemical & Microbiological Analysis 
+- M.Sc. Science and Integrated Water Management — Universitat de Barcelona  
 [LinkedIn](https://www.linkedin.com/in/yomery-mercedes-m-ab50651b5/) 
 
 ---
 
-## Referencias
+## References
 
 - Cooper, H.H. & Jacob, C.E. (1946). A generalized graphical method for evaluating formation constants. *Trans. Am. Geophys. Union*, 27(4).
 - Jacob, C.E. (1947). Drawdown test to determine effective radius of artesian well. *Trans. ASCE*, 112.
