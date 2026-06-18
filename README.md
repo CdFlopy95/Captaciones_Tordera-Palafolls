@@ -6,7 +6,7 @@
 
 ## Project Description
 
-This project was developed as part of the **Master's degree in Science and Integrated Water Management** at the Universitat de Barcelona. Its main objective is to design a **sustainable water supply strategy** for the municipalities of **La Tordera** and **Palafolls** (Maresme region, Barcelona).
+This project was developed as part of the **Master's degree in Science and Integrated Water Management** at the Universitat de Barcelona. Its main objective is to design a **sustainable water supply strategy** for the municipalities of **La Tordera** and **Palafolls** (Maresme region, Catalunya).
 
 Given that using the Tordera River directly as a primary supply source is **unfeasible** (due to a low average annual flow of 1.10 m³/s, high seasonal irregularity, and wastewater contamination), the project focuses on **designing a groundwater extraction system** within the **deep fluviochevron-deltaic aquifer of the Lower Tordera (Code: 403A21)**.
 
