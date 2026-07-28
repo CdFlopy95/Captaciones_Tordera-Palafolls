@@ -1,4 +1,4 @@
-# Tordera Groundwater Capture — Hydrogeological Analysis (Palafolls, Catalonia)
+# Tordera-Palafolls Water Intakes — Hydrogeological Analysis (Catalonia)
 
 > **Step-drawdown pumping test · Cooper-Jacob method · Well efficiency · Wyssling protection perimeters** > Academic Project — M.Sc. Science and Integrated Water Management, Universitat de Barcelona (2024–2026)
 
