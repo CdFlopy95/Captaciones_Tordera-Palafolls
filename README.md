@@ -27,28 +27,37 @@ The comprehensive analysis includes:
 | Hydraulic Conductivity (K) | ~668 m/day |
 | Regional Hydraulic Gradient (i) | 0.003 |
 | Design Extraction Flow Rate | 1,080 m³/day |
-| Radius of Influence (X₀) | ~18,800 m |
+| Stagnation Point Distance (X₀) | ~6.6 m |
 
 **Protection Perimeters (Wyssling Method):**
 
 | Time Horizon | Upstream Extension (L+) | Downstream Extension (L-) | Maximum Width (B) |
 |--------------|-------------------------|---------------------------|-------------------|
-| 60 days      | ~500 m                  | ~50 m                     | ~310 m            |
-| 100 days     | ~700 m                  | ~80 m                     | ~410 m            |
-| 5 years      | ~1,800 m                | ~400 m                    | ~830 m            |
+| 60 days      | 13.8 m                  | 7.2 m                     | 19.1 m            |
+| 100 days     | 16.6 m                  | 10.0 m                    | 20.9 m            |
+| 5 years      | 58.3 m                  | 51.7 m                    | 39.2 m            |
+
+**Regulatory Protection Zones (defined from perimeter results):**
+
+| Zone | Extent | Restrictions |
+|------|--------|---------------|
+| Immediate (black) | 2 m | Well maintenance and cleaning only |
+| Proximate (green) | 20 m | No industrial activity, discharge points, or soil-disturbing works |
+| Remote (violet) | 30 m | No persistent/toxic substances; no aquifer-flow alterations |
+| Enveloping (blue) | 80 m | No storage/production/discharge of highly persistent contaminants |
 
 ## Data Visualizations
 
-![Drawdown Curves](output/01_curvas_descenso.png)
+![Drawdown Curves](output/01_Drawdrown_curve.png)
 *Semilogarithmic drawdown-time curves per pumping step*
 
 ![Cooper-Jacob Adjustment](output/02_cooper_jacob.png)
 *Cooper-Jacob straight-line alignment — T & S estimation*
 
-![Well Efficiency](output/03_eficiencia_pozo.png)
+![Well Efficiency](output/03_Efficiency_analysis.png)
 *Well efficiency and head loss analysis (Jacob's method)*
 
-![Wyssling Perimeters](output/04_perimetros_wyssling.png)
+![Wyssling Perimeters](output/04_Perimeters_wyssling.png)
 *Sanitary protection zones — Wyssling Method mapping*
 
 ```
