@@ -61,20 +61,17 @@ The comprehensive analysis includes:
 *Sanitary protection zones — Wyssling Method mapping*
 
 ```
-captaciones_tordera/
+Tordera-Palafolls_Water_Intakes/
 │
 ├── Docs/
 │   └── Informe_Final_Captaciones_Tordera-Palafolls.pdf
 ├── data/
 │   └── palafolls_pouA.csv
 ├── output/
-│   ├── 01_curvas_descenso.png
+│   ├── 01_Drawdrown_curve.png
 │   ├── 02_cooper_jacob.png
-│   ├── 03_eficiencia_pozo.png
-│   └── 04_perimetros_wyssling.png
-├── scripts/
-│   ├── Captaciones
-│   ├── PerimetroProteccion
+│   ├── 03_Efficiency_analysis.png
+│   └── 04_Perimeters_wyssling.png
 ├── analisis_hidrogeologico_palafolls.ipynb
 └── README.md
 ```
